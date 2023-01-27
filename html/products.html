@@ -1,110 +1,230 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Bonsai palace</title>
     <meta name="description" content="bonsai" />
     <meta name="keywords" content="bonsai" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/products.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <style>
-        h1 {
-            font-family: monospace;
-            /*sets font as "monospace" for elements in h1 tag*/
-            color: #5FB920;
-            text-align: center;
-            padding-top: 50px;
+        body {
+            font-family: 'Alegreya', serif;
+            background-color: #eee;
         }
 
-        .card h4 {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-                'Lucida Sans', Arial, sans-serif;
-            color: #E49B0F;
+        .siteHeader {
+            background-image: url(../images/jungle1.jpg);
+            width: 100%;
+            height:500px;
+            background-size: cover;
+        }
+
+        .overlay {
+            color: white;
+            text-align: center;
+            padding-top: 200px;
+            font-size: 25px;
+            opacity: 0.7;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin: 55px 0;
+        }
+
+        .card {
+            width: 300px;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .card:hover {
+            opacity: 0.7;
+        }
+
+        .card img:hover {
+            opacity: 0.6;
+            transition: .3s;
+        }
+
+        .card .productImage {
+            height: 300px;
+            width: 100%;
+        }
+
+        .productImage img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .productInfo {
+            text-align: center;
+            margin: 12px 0;
+        }
+
+        .productInfo .productName {
+            color: #28292b;
+        }
+
+        .productInfo .price {
+            font-size: 15px;
+            /* color: #838383; */
+            color:#28292b;
+        }
+
+        .productInfo .price .deletedPrice {
+            color: #a1a1a1;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <div class="nav">
-            <nav>
-                <div class="logo">
-                    <img src="../images/logofinal.png">
-                </div>
-                <div class="button">
-                    <ul>
-                        <li><a href=#>HOME</a></li>
-                        <li><a href=#>BLOG</a></li>
-                        <li><a href=#>PRODUCTS</a></li>
-                        <li><a href=#>RESEARCH</a></li>
-                        <li><a href=#>ABOUT US</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+        <img class="logo" src="../images/newlogo.png" alt="logo">
+        <nav>
+            <ul class="navcontent">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Research</a></li>
+            </ul>
+        </nav>
     </header>
-    <div>
-        <h1>FIND YOUR FAVOURITE BONSAI</h1>
-    </div>
-    <div class="row1">
-        <div class="card">
-            <img src="../images/dwarfJade.jpg" alt="dwarfJade" style="height:240px;">
-            <h4>Dwarf Jade</h4>
-            <p class="price">Rs 3500</p>
-            <p><button>Add to Cart</button></p>
+        <div class="siteHeader">
+            <div class="overlay">
+                <h1>FIND YOUR FAVOURITE BONSAI WITH US</h1>
+            </div>
         </div>
-        <div class="card">
-            <img src="../images/japaneseRedMaple.png" alt="japaneseRedMaple" style="height:240px;">
-            <h4>Japanese Red Maple</h4>
-            <p class="price">Rs 11782</p>
-            <p><button>Add to Cart</button></p>
+        <div class="row">
+            <div class="card" id="dwarfJade">
+                <div class="productImage">
+                    <img src="../images/dwarfJadeWithBg.jpg" alt="dwarfJade">
+                </div>
+                <div class="productInfo">
+                    <h4 class="productName">Dwarf Jade</h4>
+                    <p class="price">Rs 3500</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="productImage">
+                    <img src="../images/satsukiAzalea22.png" alt="satsukiAzalea">
+                </div>
+                <div class="productInfo">
+                    <h4 class="productName">Satsuki Azalea</h4>
+                    <p class="price">Rs 19876</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="productImage">
+                    <img src="../images/chineseElmWithBg.png" alt="chineseElm">
+                </div>
+                <div class="productInfo">
+                    <h4 class="productName">Chinese Elm</h4>
+                    <p class="price">Rs 5130 <span style="color:rgb(250, 60, 60)">OUT OF STOCK</span></p>
+                </div>
+            </div>
         </div>
-        <div class="card">
-            <img src="../images/chineseElm.png" alt="chineseElm" style="height:240px;">
-            <h4>Chinese Elm</h4>
-            <p class="price">Rs 5130</p>
-            <p><button>Add to Cart</button></p>
+
+        <div class="row">
+            <div class="card">
+                <div class="productImage">
+                    <img src="../images/ponytailPalm22.jpg" alt="ponytailPalm">
+                </div>
+                <div class="productInfo">
+                    <h4 class="productName">Ponytail Palm</h4>
+                    <p class="price"><del class="deletedPrice">Rs 9000 </del> Rs8200 <span style="color:rgb(30, 176, 13)">SALE</span></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="productImage">
+                    <img src="../images/ginsengFicus22.jpg" alt="ginsengFicus">
+                </div>
+                <div class="productInfo">
+                    <h4 class="productName">Ginseng Ficus</h4>
+                    <p class="price">Rs 3300</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="productImage">
+                    <img src="../images/chineseSweetPlum5.jpg" alt="chineseSweetPlum">
+                </div>
+                <div class="productInfo">
+                    <h4 class="productName">Chinese Sweet Plum</h4>
+                    <p class="price"><del class="deletedPrice">Rs 5600 </del> Rs 4900 <span style="color:rgb(30, 176, 13)">SALE</span></p>
+                </div>
+            </div>
         </div>
-        <div class="card">
-            <img src="../images/ponytailPalm.png" alt="ponytailPalm" style="height:240px;">
-            <h4>Ponytail Palm</h4>
-            <p class="price"><del>Rs 9000 </del> Rs8200</p>
-            <p><button>Add to Cart</button></p>
+
+        <div class="row">
+            <div class="card">
+                <div class="productImage">
+                    <img src="../images/ginsengGraftedFicusWithBg.png" alt="ginsengGraftedFicus">
+                </div>
+                <div class="productInfo">
+                    <h4 class="productName">Ginseng Grafted Ficus</h4>
+                    <p class="price">Rs 2100</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="productImage">
+                    <img src="../images/fukienTea11.jpg" alt="fukienTea">
+                </div>
+                <div class="productInfo">
+                    <h4 class="productName">Fukien Tea</h4>
+                    <p class="price"><del class="deletedPrice">Rs 6100 </del> Rs 5200 <span style="color:rgb(30, 176, 13)">SALE</span></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="productImage">
+                    <img src="../images/japaneseRedMaple11.jpg" alt="japaneseRedMaple">
+                </div>
+                <div class="productInfo">
+                    <h4 class="productName">Japanese Red Maple</h4>
+                    <p class="price">Rs 11782</p>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="row2">
-        <div class="card">
-            <img src="../images/ginsengFicus.jpg" alt="ginsengFicus" style="height:240px;">
-            <h4>Ginseng Ficus</h4>
-            <p class="price">Rs 3300</p>
-            <p><button>Add to Cart</button></p>
+
+        <div class="row">
+            <div class="card">
+                <div class="productImage">
+                    <img src="../images/bodhi.jpg" alt="bodhi">
+                </div>
+                <div class="productInfo">
+                    <h4 class="productName">Bodhi</h4>
+                    <p class="price">Rs 21000</p>
+                </div>
+            </div>
         </div>
-        <div class="card">
-            <img src="../images/chineseSweetPlum.png" alt="chineseSweetPlum" style="height:240px;">
-            <h4>Chinese Sweet Plum</h4>
-            <p class="price"><del>Rs 5600 </del> Rs 4900</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="../images/ginsengGraftedFicus.png" alt="ginsengGraftedFicus" style="height:240px;">
-            <h4>Ginseng Grafted Ficus</h4>
-            <p class="price">Rs 2100</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="../images/fukienTea.png" alt="fukienTea" style="height:240px;">
-            <h4>Fukien Tea</h4>
-            <p class="price"><del>Rs 6100 </del> Rs 5200</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-    </div>
-    <div class="row3">
-        <div class="card">
-            <img src="../images/satsukiAzalea.png" alt="satsukiAzalea" style="height:240px;">
-            <h4>Satsuki Azalea</h4>
-            <p class="price">Rs 19876</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-    </div>
+        <footer>
+            <div class="foots">
+            
+                <h1>Usefull links</h1>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Research</a></li>
+                    <li><a href="#">About us</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <h2>Bonsai palace</h2>
+                <h3>Kamalpokhari, Kathmandu</h3>
+                <div class="media">
+                    <a href="https://www.facebook.com/profile.php?id=100089970183732" target=_blank><img src="../images/facebook.png"></a>
+                    <a href="https://www.instagram.com/bonsai.palace/" target="_blank"><img src="../images/instagram.png"></a>
+                    <a href="#"><img src="../images/discord.png"></a>
+                </div>
+            </div>
+        </footer>
 </body>
 
 </html>
