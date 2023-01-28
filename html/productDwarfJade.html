@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bonsai palace</title>
+    <meta name="description" content="bonsai" />
+    <meta name="keywords" content="bonsai" />
+    <link rel="stylesheet" href="../css/products.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:wght@200&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Alegreya', serif;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #eee;
+        }
+
+        .productContainer {
+            padding: 35px 100px;
+        }
+
+        .productRow {
+            display: flex;
+        }
+
+        .productImg {
+            float:left;
+        }
+
+        .productRow img {
+            height: 550px;
+            width: 600px;
+        }
+
+        .toggle {
+            clear: left;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .productDescription {
+            padding: 50px 40px;
+        }
+
+        .productDescription h1,
+        h2,
+        p {
+            margin-bottom: 30px;
+        }
+
+        .productDescription h1 {
+            font-size: 70px;
+            color: #806600;
+        }
+
+        .productDescription h2 {
+            font-size: 40px;
+            color: #8f8e8e;
+        }
+
+        .productContent {
+            font-size: 20px;
+            color: #744a34;
+            text-align: justify;
+        }
+
+        .buyButton {
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            background-color: #806600;
+            text-align: center;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .buyButton:hover {
+            opacity: 0.7;
+            transition: .3s;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="../images/newlogo.png" alt="logo">
+        <nav>
+            <ul class="navcontent">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Research</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Product Description -->
+    <div class="productContainer">
+        <div class="productRow">
+            <div class="productImg">
+                <img src="../images/descDwarfJade.jpg" alt="dwarfJade" class="hide" id="1">
+                <img src="../images/descDwarfJade2.jpg" alt="dwarfJadeZoom" class="hide" id="2">
+            </div>
+            <div class="toggle">
+                <button class="buyButton" onclick="toggle()">Toggle</button>
+            </div>
+            <div class="productDescription">
+                <h1>DWARF JADE</h1>
+                <h2>Rs 3500</h2>
+                <p class="productContent">Originally from dry regions of South Africa, Dwarf Jade is a fleshy small tree
+                    that can grow upto 3m. It is a very undemanding plant, well suited for individuals who travel often
+                    or who are prone to forget to water their plants.
+                </p>
+                <button class="buyButton" onclick="buy()">Buy Now</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="foots">
+
+            <h1>Usefull links</h1>
+            <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Research</a></li>
+                <li><a href="#">About us</a></li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h2>Bonsai palace</h2>
+            <h3>Kamalpokhari, Kathmandu</h3>
+            <div class="media">
+                <a href="https://www.facebook.com/profile.php?id=100089970183732" target=_blank><img
+                        src="../images/facebook.png"></a>
+                <a href="https://www.instagram.com/bonsai.palace/" target="_blank"><img
+                        src="../images/instagram.png"></a>
+                <a href="#"><img src="../images/discord.png"></a>
+            </div>
+        </div>
+    </footer>
+    <!-- Internal Javascript -->
+    <script type="text/javascript">
+        function toggle() {
+            var p1 = document.getElementById('1');
+            var p2 = document.getElementById('2');
+
+            if (p1.style.display == "none") {
+                p1.style.display = "block";
+                p2.style.display = "none";
+            }
+
+            else {
+                p1.style.display = "none";
+                p2.style.display = "block";
+            }
+        }
+        document.getElementById('1').style.display = "block";
+
+        function buy() {
+            alert("Thank you for your purchase!")
+        }
+    </script>
+</body>
