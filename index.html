@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta tags -->
+    <meta name="description" content="A bussiness website to sell bonsai plant in nominal price."/>
+    <meta name="keywords" content="bonsai, plants, jade, maple, bodhi, fukien, purchase, buy, palace"/>
+    <meta name="author" content="Team 8, sujal, reeyansh, saiyam, aayusha, shubham, rahul"/>
+    <title>Bonsai Palace</title>
+    <!-- external CSS  -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- internal CSS for home page -->
+    <style>
+        .img img {
+            width: 100%;
+            height: 650px;
+            /* align-items: center;
+            background-position: center;
+            background-size: cover; */
+            filter: brightness(40%);
+        }
+
+        .slider {
+            margin-top: 0px;
+            width: 100%;
+            height: 650px;
+            margin: 0 auto;
+        }
+
+        .background_des {
+            color: white;
+            position: relative;
+            top: -400px;
+            margin-left: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .background_des h2 {
+            font-size: 70px;
+            margin-bottom: 20px;
+        }
+
+        .background_des a {
+            text-decoration: none;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            background-color: #6c8840;
+            font-size: 20px;
+            padding: 10px;
+            color: white;
+        }
+
+        .background_des a:hover {
+            color: white;
+            background-color: #baab72;
+            transition: .3s;
+        }
+
+        .background_des p {
+            margin-bottom: 10px;
+            font-size: 20px;
+            width: 500px;
+        }
+
+        .top-picks {
+            margin-left: 30px;
+            /* margin-top: -100px; */
+        }
+
+        .item {
+            display: flex;
+            overflow-x: scroll;
+            margin-top: 20px;
+            /* align-items: center;
+            width: 100%; */
+        }
+
+        .plants {
+            height: 420px;
+            width: 260px;
+            padding: 20px 45px;
+            background: white;
+            border-radius: 20px;
+            margin: 20px;
+            margin-left: 25px;
+            text-align: center;
+            box-sizing: border-box;
+            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .3);
+            color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .plants img {
+            height: 200px;
+            width: 250px;
+            transition: .3s all;
+        }
+
+        .plants img:hover {
+            transform: scale(1.05);
+        }
+
+        .plants h2 {
+            margin-bottom: 3px;
+        }
+
+        .plants h3 {
+            margin-top: 10px;
+            margin-bottom: 2px;
+            color: black;
+        }
+
+        .plants p {
+            margin-bottom: 3px;
+            width: 220px;
+        }
+
+        .care {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 80px;
+        }
+
+        .care h1 {
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+
+        .care p {
+            font-size: 20px;
+            margin-bottom: 15px;
+            width: 500px;
+        }
+
+        .care ul li {
+            font-size: 20px;
+            width: 500px;
+            margin-bottom: 15px;
+            margin-left: 19px;
+        }
+
+        .explain {
+            width: 400px;
+            margin-left: 80px;
+            text-align: justify;
+        }
+
+        .explain h1 {
+            color: #6c8840;
+            width: 450px;
+        }
+
+        .explain_pic {
+            height: 600px;
+            width: 650px;
+            margin-right: 80px;
+            border-radius: 40px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .explain_pic img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .plants a {
+            padding: 10px;
+            background-color: #6c8840;
+            color: white;
+            border: 1px solid transparent;
+            border-radius: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+            font-size: 20px;
+            cursor: pointer;
+            margin-top: auto;
+            text-decoration: none;
+        }
+
+        .plants a:hover {
+            transform: scale(1.1);
+            transition: .3s;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!--nav section starts-->
+    <header>
+        <a href="index.html">
+            <img class="logo" src="images/newlogo.png" alt="logo">
+        </a>
+        <nav>
+            <ul class="navcontent">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="html/products.html">Products</a></li>
+                <li><a href="html/blog.html">Blog</a></li>
+                <li><a href="html/aboutus.html">About Us</a></li>
+                <li><a href="html/research.html">Research</a></li>
+            </ul>
+    </header>
+    <!--intro section of bonsai palace starts-->
+    <section class="intro">
+        <div class="slider">
+            <div class="img" id="img">
+                <img src="images/4.jpg">
+            </div>
+            <!-- image slider JS -->
+            <script>
+                //array of images
+                var images = ['images/4.jpg', 'images/5.jpg', 'images/6.jpg'];
+                var x = 0;
+                //gets elements by their id
+                var imgs = document.getElementById('img');
+                // sets time interval to 2 sec
+                setInterval(slider, 2000);
+                function slider() {
+                    //if x is less than the length of the array then, the value of x increases by 1
+                    if (x < images.length) {
+                        x = x + 1;
+                    }
+                    else {
+                        x = 1;
+                    }
+                    //innerhtml gets the html content within the element and dynamically changes it
+                    imgs.innerHTML = "<img src=" + images[x - 1] + ">";
+                }
+            </script>
+
+            <div class="background_des">
+                <h2><span style="color:#AACB73">BONSAI </span>PALACE</h2>
+                <p>Bringing the bliss of Japanese art to your garden.</p>
+                <p>Enjoy the Bonsai in Nominal price. </p><br><br>
+                <div class="button">
+                    <a href="html/products.html">SHOP NOW</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--top picks section start-->
+    <section class="top-picks" style="margin-top: 50px; margin-bottom: 20px; color:#6c8840;">
+        <h1 style="text-align: left; margin-left: 25px; font-size: 50px;">TOP PICKS</h1>
+        <div class="item" style="margin-bottom: 30px;">
+            <div class="plants">
+                <img src="images/japaneseRedMaple11.jpg">
+                <h3>Japanese Maple</h3>
+                <h2>RS 11782</h2>
+                <p>Acer Palmatum is also commonly known as Japanese Red Maple. </p>
+                <a href="html/productJapaneseRedMaple.html">BUY</a>
+            </div>
+            <div class="plants">
+                <img src="images/bodhi.jpg">
+                <h3>Bodhi tree</h3>
+                <h2> RS 21000</h2>
+                <p>Bodhi is that tree under which Siddhartha became Lord Buddha.</p>
+                <a href="html/productBodhi.html">BUY</a>
+            </div>
+            <div class="plants">
+                <img src="images/dwarfJadeWithBg.jpg">
+                <h3>Jade tree</h3>
+                <h2> RS 3500</h2>
+                <p>Crassula Ovata is known as Jade Plant and can be converted into a Bonsai.</p>
+                <a href="html/productDwarfJade.html">BUY</a>
+            </div>
+            <div class="plants">
+                <img src="images/satsukiAzalea22.png">
+                <h3>Satsuki Azalea</h3>
+                <h2> RS 19876</h2>
+                <p> The gorgeous attractive flowers for your home, office or anywhere.</p>
+                <a href="html/productSatsukiAzalea.html">BUY</a>
+            </div>
+            <div class="plants">
+                <img src="images/ginsengFicus22.jpg">
+                <h3>Ginseng ficus</h3>
+                <h2> RS 2100</h2>
+                <p>This bonsai tree looks terrific and requires minimal care.</p>
+                <a href="html/productGinsengFicus.html">BUY</a>
+            </div>
+            <div class="plants">
+                <img src="images/fukienTea11.jpg">
+                <h3>Fukien Tea</h3>
+                <h2> RS 5200</h2>
+                <p>The other name of carmona. It is originally from China. </p>
+                <a href="html/productFukienTea.html">BUY</a>
+            </div>
+        </div>
+    </section>
+    <!-- care of bonsai section -->
+    <section class="information">
+        <div class="care">
+            <div class="explain">
+                <h1>Bonsai Tree Care</h1>
+                <ul>
+                    <p>What goes into the care of a Bonsai is not overly complex, but these trees do require consistent
+                        maintenance and upkeep.
+                        Here are some suggestion for you to take care of a bonsai tree:</p>
+                    <li>Research whether the bonsai plant is indoor or outdoor.</li>
+                    <li>Deciduous trees are outdoor bonsai. These include maple, elms and gingko.</li>
+                    <li>Subtropical species which thrive off of stable temperatures throughout the year are indoor
+                        bonsai.
+                        These include jade plants, Hawaiian umbrella trees, and ficus trees.</li>
+                    <li>Direct heat and draft are prohibited for bonsai.</li>
+                    <li>The best way to tell if the bonsai needs water is to feel the soil. Stick your finger a half
+                        inch or so into the soil. If you do not feel much moisture then, it is likely time to water your
+                        bonsai.</li>
+                </ul>
+            </div>
+            <div class="explain_pic">
+                <img src="images/watering.jpg" class="hide" id="1" onclick="toggle()">
+                <img src="images/pruning.jpg" class="hide" id="2" onclick="toggle()">
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section -->
+    <footer>
+        <div class="foot">
+            <div class="foots">
+                <h1>Useful links</h1>
+                <ul>
+                    <li><a href="html/blog.html">Blog</a></li>
+                    <li><a href="html/products.html">Products</a></li>
+                    <li><a href="html/research.html">Research</a></li>
+                    <li><a href="html/aboutus.html">About us</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <h2>Bonsai Palace</h2>
+                <h3>Kamalpokhari, Kathmandu</h3>
+                <div class="media">
+                    <a href="https://www.facebook.com/profile.php?id=100089970183732" target="_blank"><img
+                            src="images/facebook.png"></a>
+                    <a href="https://www.instagram.com/bonsai.palace/" target="_blank"><img
+                            src="images/instagram.png"></a>
+                </div>
+            </div>
+        </div>
+        <p>Copyright &copy; 2023 All rights reserved.</p>
+    </footer>
+    <!-- external javascript for toggle -->
+    <script src="js/toggle.js"></script>
+</body>
+
+</html>
