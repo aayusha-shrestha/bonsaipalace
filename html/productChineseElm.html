@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>Dwarf Jade</title>
+    <title>Chinese Elm</title>
     <meta name="description" content="bonsai in nepal, bonsai in cheap price, bonsai shop" />
     <meta name="keywords"
         content="bonsai, dwarf jade, satsuki azalea, chinese elm, ponytail palm, ginseng ficus, sweet plum, bodhi, japanese red maple" />
-    <meta name="author" content="Team 8, sujal, reeyansh, saiyam, aayusha, shubham, rahul"/>
+    <meta name="author" content="Team 8, sujal, reeyansh, saiyam, aayusha, shubham, rahul" />
     <!-- external CSS -->
     <link rel="stylesheet" href="../css/style.css" />
     <!-- internal CSS for product page -->
@@ -91,18 +91,21 @@
     <div class="productContainer">
         <div class="productRow">
             <div class="productImg">
-                <img src="../images/descDwarfJade2.jpg" alt="dwarfJade" class="hide" id="1">
-                <img src="../images/descDwarfJade.jpg" alt="dwarfJade" class="hide" id="2">
+                <img src="../images/descChineseElm1.jpg" alt="chineseElm" class="hide" id="1">
+                <img src="../images/descChineseElm2.png" alt="chineseElm" class="hide" id="2">
             </div>
             <div>
-                <img src="../images/slider.png" onclick="toggle()" style="height:40px; width:40px; margin-top: 250px; cursor: pointer;">
+                <img src="../images/slider.png" onclick="toggle()"
+                    style="height:40px; width:40px; margin-top: 250px; cursor: pointer;">
             </div>
             <div class="productDescription">
-                <h1>DWARF JADE</h1>
-                <h2>Rs 3500</h2>
-                <p class="productContent">Originally from dry regions of South Africa, Dwarf Jade is a fleshy small tree
-                    that can grow upto 3m. It is a very undemanding plant, well suited for individuals who travel often
-                    or who are prone to forget to water their plants.
+                <h1>CHINESE ELM</h1>
+                <h2>Rs 5130 <span style="color:rgb(250, 60, 60)"> OUT OF STOCK</span></h2>
+                <p class="productContent">The Chinese elm is an extremely robust bonsai tree which tolerates a wide
+                    range
+                    of different conditions (temperature, light, humidity). They can be cared for as an indoor
+                    bonsai or as a semi outdoor. Their high pruning tolerance makes them a beginner's bonsai of
+                    1st choice.
                 </p>
                 <button class="buyButton" onclick="buy()">Buy Now</button>
             </div>
@@ -135,6 +138,12 @@
     </footer>
     <!-- external javascript -->
     <script src="../js/toggle.js"></script>
-    <script src="../js/buy.js"></script>
+    <!-- internal javascript -->
+    <script type="text/javascript">
+        function buy() {
+            //throws alert
+            alert("Sorry, this item is currently out of stock.");
+        }
+    </script>
 </body>
 </html>
