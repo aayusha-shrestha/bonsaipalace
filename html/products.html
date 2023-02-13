@@ -2,25 +2,20 @@
 <html lang="en">
 
 <head>
-    <title>Bonsai palace</title>
-    <meta name="description" content="bonsai" />
-    <meta name="keywords" content="bonsai" />
-    <link rel="stylesheet" href="../css/products.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <title>Products</title>
+    <!-- meta tags -->
+    <meta name="description" content="bonsai in nepal, bonsai in cheap price, bonsai shop" />
+    <meta name="keywords"
+        content="bonsai, dwarf jade, satsuki azalea, chinese elm, ponytail palm, ginseng ficus, sweet plum, bodhi, japanese red maple" />
+    <meta name="author" content="Team 8, sujal, reeyansh, saiyam, aayusha, shubham, rahul"/>
+    <!-- external css -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- internal CSS for products page -->
     <style>
-        body {
-            font-family: 'Alegreya', serif;
-            background-color: #eee;
-        }
-
         .siteHeader {
             background-image: url(../images/jungle1.jpg);
             width: 100%;
-            height:500px;
+            height: 500px;
             background-size: cover;
         }
 
@@ -32,6 +27,7 @@
             opacity: 0.7;
         }
 
+        /* flex property */
         .row {
             display: flex;
             align-items: center;
@@ -45,12 +41,8 @@
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
 
-        .card:hover {
-            opacity: 0.7;
-        }
-
         .card img:hover {
-            opacity: 0.6;
+            opacity: 0.7;
             transition: .3s;
         }
 
@@ -71,42 +63,50 @@
 
         .productInfo .productName {
             color: #28292b;
+            font-weight: bold;
         }
 
         .productInfo .price {
             font-size: 15px;
-            /* color: #838383; */
-            color:#28292b;
+            color: #28292b;
         }
 
-        .productInfo .price .deletedPrice {
+        .deletedPrice {
             color: #a1a1a1;
         }
     </style>
 </head>
 
 <body>
+    <!-- nav bar section -->
     <header>
-        <img class="logo" src="../images/newlogo.png" alt="logo">
+        <a href="../index.html">
+            <img class="logo" src="../images/newlogo.png" alt="logo">
+        </a>
         <nav>
             <ul class="navcontent">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Research</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li class="active"><a href="products.html">Products</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="research.html">Research</a></li>
             </ul>
         </nav>
     </header>
+    <!-- products section -->
+    <div class="product">
         <div class="siteHeader">
             <div class="overlay">
                 <h1>FIND YOUR FAVOURITE BONSAI WITH US</h1>
             </div>
         </div>
+        <!-- products card section -->
         <div class="row">
-            <div class="card" id="dwarfJade">
+            <div class="card">
                 <div class="productImage">
-                    <img src="../images/dwarfJadeWithBg.jpg" alt="dwarfJade">
+                    <a href="../html/productDwarfJade.html">
+                        <img src="../images/dwarfJadeWithBg.jpg" alt="dwarfJade">
+                    </a>
                 </div>
                 <div class="productInfo">
                     <h4 class="productName">Dwarf Jade</h4>
@@ -115,7 +115,9 @@
             </div>
             <div class="card">
                 <div class="productImage">
-                    <img src="../images/satsukiAzalea22.png" alt="satsukiAzalea">
+                    <a href="../html/productSatsukiAzalea.html">
+                        <img src="../images/satsukiAzalea22.png" alt="satsukiAzalea">
+                    </a>
                 </div>
                 <div class="productInfo">
                     <h4 class="productName">Satsuki Azalea</h4>
@@ -124,7 +126,9 @@
             </div>
             <div class="card">
                 <div class="productImage">
-                    <img src="../images/chineseElmWithBg.png" alt="chineseElm">
+                    <a href="../html/productChineseElm.html">
+                        <img src="../images/chineseElmWithBg.png" alt="chineseElm">
+                    </a>
                 </div>
                 <div class="productInfo">
                     <h4 class="productName">Chinese Elm</h4>
@@ -136,16 +140,21 @@
         <div class="row">
             <div class="card">
                 <div class="productImage">
-                    <img src="../images/ponytailPalm22.jpg" alt="ponytailPalm">
+                    <a href="../html/productPonytailPalm.html">
+                        <img src="../images/ponytailPalm22.jpg" alt="ponytailPalm">
+                    </a>
                 </div>
                 <div class="productInfo">
                     <h4 class="productName">Ponytail Palm</h4>
-                    <p class="price"><del class="deletedPrice">Rs 9000 </del> Rs8200 <span style="color:rgb(30, 176, 13)">SALE</span></p>
+                    <p class="price"><del class="deletedPrice">Rs 9000 </del> Rs8200 <span
+                            style="color:rgb(30, 176, 13)">SALE</span></p>
                 </div>
             </div>
             <div class="card">
                 <div class="productImage">
-                    <img src="../images/ginsengFicus22.jpg" alt="ginsengFicus">
+                    <a href="../html/productGinsengFicus.html">
+                        <img src="../images/ginsengFicus22.jpg" alt="ginsengFicus">
+                    </a>
                 </div>
                 <div class="productInfo">
                     <h4 class="productName">Ginseng Ficus</h4>
@@ -154,11 +163,14 @@
             </div>
             <div class="card">
                 <div class="productImage">
-                    <img src="../images/chineseSweetPlum5.jpg" alt="chineseSweetPlum">
+                    <a href="../html/productChineseSweetPlum.html">
+                        <img src="../images/chineseSweetPlum5.jpg" alt="chineseSweetPlum">
+                    </a>
                 </div>
                 <div class="productInfo">
                     <h4 class="productName">Chinese Sweet Plum</h4>
-                    <p class="price"><del class="deletedPrice">Rs 5600 </del> Rs 4900 <span style="color:rgb(30, 176, 13)">SALE</span></p>
+                    <p class="price"><del class="deletedPrice">Rs 5600 </del> Rs 4900 <span
+                            style="color:rgb(30, 176, 13)">SALE</span></p>
                 </div>
             </div>
         </div>
@@ -166,7 +178,9 @@
         <div class="row">
             <div class="card">
                 <div class="productImage">
-                    <img src="../images/ginsengGraftedFicusWithBg.png" alt="ginsengGraftedFicus">
+                    <a href="../html/productGinsengGraftedFicus.html">
+                        <img src="../images/ginsengGraftedFicusWithBg.png" alt="ginsengGraftedFicus">
+                    </a>
                 </div>
                 <div class="productInfo">
                     <h4 class="productName">Ginseng Grafted Ficus</h4>
@@ -175,16 +189,21 @@
             </div>
             <div class="card">
                 <div class="productImage">
-                    <img src="../images/fukienTea11.jpg" alt="fukienTea">
+                    <a href="../html/productFukienTea.html">
+                        <img src="../images/fukienTea11.jpg" alt="fukienTea">
+                    </a>
                 </div>
                 <div class="productInfo">
                     <h4 class="productName">Fukien Tea</h4>
-                    <p class="price"><del class="deletedPrice">Rs 6100 </del> Rs 5200 <span style="color:rgb(30, 176, 13)">SALE</span></p>
+                    <p class="price"><del class="deletedPrice">Rs 6100 </del> Rs 5200 <span
+                            style="color:rgb(30, 176, 13)">SALE</span></p>
                 </div>
             </div>
             <div class="card">
                 <div class="productImage">
-                    <img src="../images/japaneseRedMaple11.jpg" alt="japaneseRedMaple">
+                    <a href="../html/productJapaneseRedMaple.html">
+                        <img src="../images/japaneseRedMaple11.jpg" alt="japaneseRedMaple">
+                    </a>
                 </div>
                 <div class="productInfo">
                     <h4 class="productName">Japanese Red Maple</h4>
@@ -196,7 +215,9 @@
         <div class="row">
             <div class="card">
                 <div class="productImage">
-                    <img src="../images/bodhi.jpg" alt="bodhi">
+                    <a href="../html/productBodhi.html">
+                        <img src="../images/bodhi.jpg" alt="bodhi">
+                    </a>
                 </div>
                 <div class="productInfo">
                     <h4 class="productName">Bodhi</h4>
@@ -204,27 +225,32 @@
                 </div>
             </div>
         </div>
-        <footer>
+    </div>
+    <!-- footer section -->
+    <footer>
+        <div class="foot">
             <div class="foots">
-            
-                <h1>Usefull links</h1>
+                <h1>Useful links</h1>
                 <ul>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Research</a></li>
-                    <li><a href="#">About us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="aboutus.html">About us</a></li>
                 </ul>
             </div>
             <div class="contact">
-                <h2>Bonsai palace</h2>
+                <h2>Bonsai Palace</h2>
                 <h3>Kamalpokhari, Kathmandu</h3>
                 <div class="media">
-                    <a href="https://www.facebook.com/profile.php?id=100089970183732" target=_blank><img src="../images/facebook.png"></a>
-                    <a href="https://www.instagram.com/bonsai.palace/" target="_blank"><img src="../images/instagram.png"></a>
-                    <a href="#"><img src="../images/discord.png"></a>
+                    <a href="https://www.facebook.com/profile.php?id=100089970183732" target="_blank"><img
+                            src="../images/facebook.png"></a>
+                    <a href="https://www.instagram.com/bonsai.palace/" target="_blank"><img
+                            src="../images/instagram.png"></a>
                 </div>
             </div>
-        </footer>
+        </div>
+        <p>Copyright &copy; 2023 All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
