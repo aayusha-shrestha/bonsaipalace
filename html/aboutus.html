@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>About Us</title>
+  <meta name="description" content="A bussiness website to sell bonsai plant in nominal price."/>
+  <meta name="keywords" content="bonsai, plants, jade, maple, bodhi, fukien, purchase, buy, palace"/>
+  <meta name="author" content="Team 8, sujal, reeyansh, saiyam, aayusha, shubham, rahul"/>
+  <!-- external CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* internal css for about us starts */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .about {
+      height: 700px;
+      width: 100%;
+      background: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .about .main img {
+      width: 580px;
+      height: auto;
+      padding: 0 10px;
+    }
+
+    .all-text {
+      width: 600px;
+      padding: 0 10px;
+      margin-left: 100px;
+    }
+
+    .main {
+      width: 1290px;
+      max-width: 95%;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .all-text h4 {
+      font-family: sans-serif;
+      font-size: 22px;
+      color: #777777;
+      letter-spacing: 1px;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    .all-text h1 {
+      font-size: 45px;
+      color: #111111;
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .all-text p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      color: #777777;
+      line-height: 30px;
+      margin-bottom: 35px;
+    }
+
+    .btn button {
+      background: white;
+      padding: 20px 32px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #111111;
+      border: none;
+      box-shadow: 0px 16px 32px 0px rgba(0 0 0/6%);
+    }
+
+    .btn button:hover {
+      background-color: #9F8772;
+      color: white;
+      transition: .3s;
+    }
+
+    /* internal css for Our team card section starts  */
+    .column {
+      float: left;
+      width: 31.3%;
+      margin-bottom: 16px;
+      padding: 25px;
+      margin-left: 25px;
+    }
+
+    .card {
+      padding: 25px 20px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .title {
+      color: grey;
+      margin-bottom: 5px;
+      margin-top: 15px;
+    }
+
+    .container .content {
+      margin-top: 10px;
+      margin-bottom: 15px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 20px;
+    }
+
+    .button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .button:hover {
+      background-color: #555;
+    }
+
+    .card p {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .card h2 {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .aboutSection {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* internal css for feedback form */
+    .open-button {
+      background-color: #04AA6D;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      opacity: 0.8;
+      position: relative;
+      right: 28px;
+      width: 280px;
+      margin: 50px 80px;
+    }
+
+    .form-popup {
+      display: none;
+      position: relative;
+      right: 6px;
+      border: 21px solid #f1f1f1;
+    }
+
+    .form-container {
+      max-width: 900px;
+      padding: 45px;
+      background-color: white;
+      margin-right: 13px;
+    }
+
+    .form-container input[type=text],
+    .form-container input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+      border-right: 5px;
+    }
+
+    .form-container .btn {
+      background-color: #04AA6D;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 10px;
+      opacity: 0.8;
+    }
+
+    .form-container .cancel {
+      background-color: red;
+    }
+
+    .form-container .btn:hover,
+    .open-button:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar starts -->
+  <header>
+    <a href="../index.html">
+      <img class="logo" src="../images/newlogo.png" alt="logo">
+    </a>
+    <nav>
+      <ul class="navcontent">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="active"><a href="aboutus.html">About Us</a></li>
+        <li><a href="research.html">Research</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- about us starts -->
+  <section class="about" style="margin-bottom: 70px;">
+    <div class="main">
+      <div>
+        <section class="slideshow">
+          <div class="slider">
+            <div id="img">
+              <img src="../images/mainpagepic.jpg" style="height: 500px; width: 100% ;">
+            </div>
+          </div>
+
+        </section>
+      </div>
+      <div class="all-text">
+        <h4>Curiorists</h4>
+        <h1>Get to know about us and our journey</h1>
+        <p>Founded in 2023, Bonsai Palace was built with a simple mission: to spread the beauty of bonsai around Nepal.
+          The variety of bonsai trees available on our website ranges from small and delicate to grand and
+          impressive.To ensure that each tree is of the finest caliber, we only purchase them from top-notch
+          nurseries and farmers.
+          <br>
+          <br>
+          <spans style="color: #C69B7B; font-size: 20px;"><b>Get to know more about our team below</b></span>
+
+        </p>
+        <div class="btn">
+          <a href="#ourteam"> <button type="button">Our team</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- about us ends -->
+
+  <!-- /* Our team section starts  */ -->
+  <section class="aboutSection">
+    <div class="row" id="ourteam">
+      <h1
+        style="justify-content: center; text-align:center; font-size: 45px; margin-bottom: 12px;font-family:Arial, Helvetica, sans-serif;">
+        Our Team</h1>
+      <!-- Aayusha -->
+      <div class="column">
+        <div class="card">
+          <img src="../images/aayusha.JPG" style="object-fit: cover; border-radius: 10px;" height="400px" width="100%"
+            alt="Aayusha">
+          <div class="container">
+            <h2>Aayusha Shrestha</h2>
+            <p class="title">Group Leader</p>
+            <p class="content">np01cp4a220334@islingtoncollege.edu.np</p>
+            <p><a href="aayushaportfolio.html" target="_blank"><button class="button">Portfolio</button></a></p>
+          </div>
+        </div>
+      </div>
+      <!-- sujal -->
+      <div class="column">
+        <div class="card">
+          <img src="../images/sujalportfolio1.jpg" style="object-fit: cover; border-radius: 10px;" height="400px"
+            width="100%" alt="sujal" style="width:100%">
+          <div class="container">
+            <h2>Sujal Shrestha</h2>
+            <p class="title">Member</p>
+            <p class="content">np01cp4a220517@islingtoncollege.edu.np</p>
+            <p><a href="sujalportfolio.html" target="_blank"><button class="button">Portfolio</button></a></p>
+          </div>
+        </div>
+      </div>
+      <!-- rahul -->
+      <div class="column">
+        <div class="card">
+          <img src="../images/rahul.jpg" style="object-fit: cover; border-radius: 10px;" height="400px" width="100%"
+            alt="rahul" style="width:100%">
+          <div class="container">
+            <h2>Rahul Shakya</h2>
+            <p class="title">Member</p>
+            <p class="content">np01cp4a220351@islingtoncollege.edu.np</p>
+            <p><a href="rahulportfolio.html" target="_blank"><button class="button">Portfolio</button></a></p>
+          </div>
+        </div>
+      </div>
+      <!-- reeyansh -->
+      <div class="column">
+        <div class="card">
+          <img src="../images/me.jpg" style="object-fit: cover; border-radius: 10px;" height="400px" width="100%"
+            alt="reeyansh" style="width:100%">
+          <div class="container">
+            <h2>Reeyansh Bajracharya</h2>
+            <p class="title">Member</p>
+            <p class="content">np01cp4a220343@islingtoncollege.edu.np</p>
+            <p><a href="reeyanshportfolio.html" target="_blank"><button class="button">Portfolio</button></a></p>
+          </div>
+        </div>
+      </div>
+      <!-- shubham -->
+      <div class="column">
+        <div class="card">
+          <img src="../images/shubham.jpg" style="object-fit: cover; border-radius: 10px;" height="400px" width="100%"
+            alt="shubham" style="width:100%">
+          <div class="container">
+            <h2>Shubham Tandukar</h2>
+            <p class="title">Member</p>
+            <p class="content">np01cp4a220105@islingtoncollege.edu.np</p>
+            <p><a href="shubhamportfolio.html" target="_blank"><button class="button">Portfolio</button></a></p>
+          </div>
+        </div>
+      </div>
+      <!-- saiyam -->
+      <div class="column">
+        <div class="card">
+          <img src="../images/saiyam.jpg" style="object-fit: cover; border-radius: 10px;" height="400px" width="100%"
+            alt="saiyam" style="width:100%">
+          <div class="container">
+            <h2>Saiyam Shrestha</h2>
+            <p class="title">Member</p>
+            <p class="content">np01cp4a220352@islingtoncollege.edu.np</p>
+            <p><a href="saiyamportfolio.html" target="_blank"><button class="button">Portfolio</button></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- external JS linking section  -->
+    <script src="../js/aboutus.js"></script>
+  </section>
+
+  <!-- feedback form starts -->
+  <button class="open-button" onclick="openForm()">Please drop your feedback here</button>
+  <div class="form-popup" id="myForm">
+    <form class="form-container">
+      <h1>Feedback</h1>
+      <label for="name"><b>Name</b></label>
+      <input type="text" placeholder="Enter Name" name="name" id="name" required>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+      <label for="phone"><b>Phone Number</b></label>
+      <select>
+        <option>+977</option>
+        <option>+978</option>
+        <option>+979</option>
+        <option>+980</option>
+        <option>+981</option>
+        <option>+982</option>
+      </select><br>
+      <input type="text" placeholder="Enter Phone Number" name="phone"><br>
+      <label for="feedback"><b>Feedback</b></label>
+      <input type="text" placeholder="Please share your feedback here." id="feedback" required>
+      <button type="submit" class="btn" onclick="openMessage()">Submit</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+
+    function openMessage() {
+      var Name = document.getElementById('name');
+      var Email = document.getElementById('email');
+      var Feedback = document.getElementById('feedback');
+      //if the value of variables Name, Email, Feedback is empty then, displays the default message "please fill out this field"
+      if (Name.value === '' || Email.value === '' || Feedback.value === '') {
+      }
+      else {
+        //throws alert
+        alert("Thank you for your feedback, hope you enjoyed our services!");
+      }
+    }
+  </script>
+  <!-- feedback form ends -->
+
+  <!-- Footer section -->
+  <footer>
+    <div class="foot">
+      <div class="foots">
+        <h1>Useful links</h1>
+        <ul>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="aboutus.html">About us</a></li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h2>Bonsai Palace</h2>
+        <h3>Kamalpokhari, Kathmandu</h3>
+        <div class="media">
+          <a href="https://www.facebook.com/profile.php?id=100089970183732" target="_blank"><img
+              src="../images/facebook.png"></a>
+          <a href="https://www.instagram.com/bonsai.palace/" target="_blank"><img src="../images/instagram.png"></a>
+        </div>
+      </div>
+    </div>
+    <p>Copyright &copy; 2023 All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
